@@ -12,14 +12,14 @@ const ChannelList = ({ channels } : { channels: any }) => {
       sx={{ width:'90vw', bg: 'background.paper', display:'flex', gap:6, marginTop:2, backgroundColor:'#161c2f', paddingLeft:2, paddingRight:2,
       }}
     >
-      {channels.map((channel: any, index: any) => (
-        <ChannelItem key={index} channel={channel} />
+      {channels.map((channel: any) => (
+        <ChannelItem key={channel.id} channel={channel} />
       ))}
     </HorizontalScrollBox>
   ) : (
     <ScrollBox sx={{ width:'100px', height: '100vh', bg: 'background.paper', display:'flex', flexDirection:'column', gap:6, paddingTop:2, paddingBottom:2, backgroundColor:'#161c2f'}}>
-      {channels.map((channel: any, index: any) => (
-        <ChannelItem key={index} channel={channel} />
+      {channels.map((channel: any) => (
+        <ChannelItem key={channel.id} channel={channel} />
       ))}
   </ScrollBox>
   )

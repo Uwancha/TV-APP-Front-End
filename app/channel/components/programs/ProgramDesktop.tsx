@@ -1,12 +1,25 @@
 import { Box, Grid, Link, Typography } from '@mui/material'
-import CategoryList from '../../Components/CategoryList';
-import DateAndTime from '../../Components/DateAndTime';
-import SearchComponent from '../../Components/SearchComponent';
+import CategoryList from '../../../Components/CategoryList';
+import DateAndTime from '../../../Components/DateAndTime';
+import SearchComponent from '../../../Components/SearchComponent';
 import { AccountBox, NavigateBefore } from '@mui/icons-material';
 import ProgramList from './ProgramList';
-import Navigation from '../../Components/Navigation';
+import Navigation from '../../../Components/Navigation';
+import { useEffect, useState } from 'react';
 
-export default function ProgramDesktop() {
+export default function ProgramDesktop({ data, id } : { data: any, id: string }) {
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredData, setFilteredData] = useState(data);
+
+    useEffect(() => {
+        const query = searchQuery.toLowerCase();
+        const filtered = data.filter((item: any) =>
+            item.title.toLowerCase().includes(query)        
+        );
+
+        setFilteredData(filtered);
+    }, [searchQuery, data]);
+
     return (
         <Grid container>
             <Grid item xl={2} lg={2} sx={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:26, height:'50vh', marginTop:2, padding:4}}>
@@ -23,13 +36,13 @@ export default function ProgramDesktop() {
                     </Box>
                     <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:2}}>
                         <DateAndTime />
-                        <SearchComponent/>
+                        <SearchComponent search={searchQuery} setSearch={setSearchQuery}/>
                         <AccountBox />
                     </Box>
                 </Box>
-                <CategoryList />
+                <CategoryList channelID={id} />
             </Box>
-            <ProgramList />
+            <ProgramList programs={filteredData} />
             </Grid>
         </Grid>
     );
