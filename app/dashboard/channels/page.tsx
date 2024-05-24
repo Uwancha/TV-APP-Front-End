@@ -23,7 +23,7 @@ export default function Channels() {
           </Grid>
         } 
     
-        <Grid item lg={10} sx={{ padding:4, backgroundColor:'whitesmoke', boxShadow:'-1px -1px 8px 1px #d5d6e2'}}>
+        <Grid item xs={12} lg={10} sx={{ padding:4, backgroundColor:'whitesmoke', boxShadow:'-1px -1px 8px 1px #d5d6e2'}}>
           <ChannelTable/>
         </Grid>
       </Grid>

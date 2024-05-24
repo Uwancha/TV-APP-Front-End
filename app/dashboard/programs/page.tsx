@@ -14,7 +14,7 @@ export default function Programs() {
     <Box sx={{backgroundColor:'whitesmoke'}}>
       <Header currentpage={'Program'} />
       {isMobile && 
-          <MobileSideBar />
+        <MobileSideBar />
       } 
       <Grid container>
         {!isMobile && 
@@ -23,7 +23,7 @@ export default function Programs() {
           </Grid>
         } 
     
-        <Grid item lg={10} sx={{ padding:4, boxShadow:'-1px -1px 8px 1px #d5d6e2'}}>
+        <Grid item xs={12} lg={10} sx={{ padding:4, boxShadow:'-1px -1px 8px 1px #d5d6e2'}}>
           <ProgramTable/>
         </Grid>
       </Grid>
