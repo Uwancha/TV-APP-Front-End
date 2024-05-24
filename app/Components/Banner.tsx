@@ -21,10 +21,10 @@ const Banner = () => {
                     HBO
                 </Typography>
                 <Typography variant="h5" component="h2">
-                    Grey's Anatomy
+                    Grey&apos;s Anatomy
                 </Typography>
                 <Typography variant="body2">
-                    Grey's Anatomy is an American medical drama television series focusing on the personal and professional lives of surgical interns, residents, and attendings ...    </Typography>
+                    Grey&apos;s Anatomy is an American medical drama television series focusing on the personal and professional lives of surgical interns, residents, and attendings ...    </Typography>
                 <Button variant="contained" color="primary" sx={{alignSelf: 'start', backgroundColor:'#161c2f'}}>
                     Watch Now
                 </Button>
@@ -57,10 +57,10 @@ const Banner = () => {
           Now is playing
         </Typography>
         <Typography variant="h3" component="h2">
-          Grey's Anatomy
+          Grey&apos;s Anatomy
         </Typography>
         <Typography variant="body2" sx={{width: '40%', marginBottom: 4}}>
-          Grey's Anatomy is an American medical drama television series focusing on the personal and professional lives of surgical interns, residents, and attendings ...    </Typography>
+          Grey&apos;s Anatomy is an American medical drama television series focusing on the personal and professional lives of surgical interns, residents, and attendings ...    </Typography>
         <Button variant="contained" color="primary" sx={{alignSelf: 'start', backgroundColor:'#161c2f'}}>
           Watch Now
         </Button>

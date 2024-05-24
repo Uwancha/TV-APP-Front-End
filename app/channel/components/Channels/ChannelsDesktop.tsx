@@ -6,7 +6,7 @@ import Sidebar from '../../../Components/Sidebar';
 import Logo from '../../../Components/Logo';
 import DateAndTime from '../../../Components/DateAndTime';
 import SearchComponent from '../../../Components/SearchComponent';
-import { AccountBoxRounded } from '@mui/icons-material';
+import { Profile } from '../../components/../../Components/Profile';
 
 const types = ['Live TV\'s', 'Movies', 'TV Shows', 'Sports'];
 
@@ -19,7 +19,7 @@ export const ChannelDesktop = ({data}:any) => (
           <Box sx={{display:'flex', alignItems:'center', gap:2, alignSelf:'flex-end'}}>
             <DateAndTime />
             <SearchComponent search='' setSearch={() => console.log('')}/>
-            <AccountBoxRounded fontSize='large' />
+            <Profile/>
           </Box>
         </Header>
         <Banner />

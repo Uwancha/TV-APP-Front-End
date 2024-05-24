@@ -2,10 +2,11 @@ import { Box, Grid, Link, Typography } from '@mui/material'
 import CategoryList from '../../../Components/CategoryList';
 import DateAndTime from '../../../Components/DateAndTime';
 import SearchComponent from '../../../Components/SearchComponent';
-import { AccountBox, NavigateBefore } from '@mui/icons-material';
+import { NavigateBefore } from '@mui/icons-material';
 import ProgramList from './ProgramList';
 import Navigation from '../../../Components/Navigation';
 import { useEffect, useState } from 'react';
+import { Profile } from '../../../Components/Profile';
 
 export default function ProgramDesktop({ data, id } : { data: any, id: string }) {
     const [searchQuery, setSearchQuery] = useState('');
@@ -37,7 +38,7 @@ export default function ProgramDesktop({ data, id } : { data: any, id: string })
                     <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:2}}>
                         <DateAndTime />
                         <SearchComponent search={searchQuery} setSearch={setSearchQuery}/>
-                        <AccountBox />
+                        <Profile />
                     </Box>
                 </Box>
                 <CategoryList channelID={id} />

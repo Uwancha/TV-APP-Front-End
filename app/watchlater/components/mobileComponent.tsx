@@ -1,8 +1,9 @@
 import { Box, Grid, Link, Typography } from '@mui/material'
 import SearchComponent from '../../Components/SearchComponent';
-import { AccountBox, NavigateBefore } from '@mui/icons-material';
+import { NavigateBefore } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 import { MovieCard } from '@/app/Components/MovieCard';
+import { Profile } from '@/app/Components/Profile';
 
 export default function WatchLaterMobile({ data }:{data: any}) {
     const [searchQuery, setSearchQuery] = useState('');
@@ -29,14 +30,14 @@ export default function WatchLaterMobile({ data }:{data: any}) {
                     </Box>
                     <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:4}}>
                         <SearchComponent search={searchQuery} setSearch={setSearchQuery}/>
-                        <AccountBox />
+                        <Profile />
                     </Box>
                 </Box>
             </Box>
             <Grid container spacing={6} >
                 {filteredData.map((movie:any) => (
-                <Grid item xs={12} md={6} xl={4} lg={3}>
-                    <MovieCard key={movie.id} movie={movie}/>
+                <Grid key={movie.id} item xs={12} md={6} xl={4} lg={3}>
+                    <MovieCard movie={movie}/>
                 </Grid>
                 ))} 
             </Grid>
