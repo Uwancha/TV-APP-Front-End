@@ -17,7 +17,7 @@ const ChannelList = ({ channels } : { channels: any }) => {
       ))}
     </HorizontalScrollBox>
   ) : (
-    <ScrollBox sx={{ width:'100px', height: '100vh', bg: 'background.paper', display:'flex', flexDirection:'column', gap:6, paddingTop:2, paddingBottom:2, backgroundColor:'#161c2f'}}>
+    <ScrollBox sx={{height: '100vh', display:'flex', flexDirection:'column', gap:6, paddingTop:2, paddingBottom:2, backgroundColor:'#161c2f'}}>
       {channels.map((channel: any) => (
         <ChannelItem key={channel.id} channel={channel} />
       ))}

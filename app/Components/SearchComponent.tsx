@@ -15,15 +15,14 @@ const SearchComponent = ({search, setSearch}: SearchBarProps) => {
     };
 
     return (
-        <Paper sx={{p: '2px 4px', display: 'flex', alignItems: 'center',
-            width: open ? '300px' : '40px', transition: 'width 0.3s',}}
+        <Paper sx={{ display: 'flex', alignItems: 'center',
+            width: open ? '180px' : '40px', transition: 'width 0.3s'}}
         >
-            <IconButton sx={{ p: '10px' }} onClick={handleSearchClick}>
+            <IconButton  onClick={handleSearchClick}>
                 <SearchIcon />
             </IconButton>
              <Fade in={open}>
                 <InputBase
-                sx={{ ml: 1, flex: 1 }}
                 placeholder="Search..."
                 inputProps={{ 'aria-label': 'search' }}
                 value={search}
